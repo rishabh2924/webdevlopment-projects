@@ -6,6 +6,7 @@
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<link rel="stylesheet" href="/style.css" />
+        <link rel="stylesheet" href="/media.css">
 	</head>
 	<body>
         <!-- top banner -->
@@ -21,7 +22,7 @@
                 <a href="#" class="company-logo">
                     <img src="./assets/asset 1.png" alt="">
                 </a>
-                <div class="nav-links">
+                <div class="nav-links" id="nav-links">
                     <ul class="flex">
                         <li><a href="#" class="hover-links">Products</a></li>
                         <li><a href="#" class="hover-links"> Customer</a>
@@ -32,6 +33,7 @@
                         <li><a href="#" class="hover-links primary-button"> sign up</a></li>
                     </ul>
                 </div>
+                <a href="#" class="nav-toggle hover-link" id="nav-toggle" ><i class="fa-solid fa-bars"></i></a>
             </div>
         </nav>
         <!-- header   -->
@@ -125,7 +127,7 @@
             </div>
         </section>
          <section class="big-features">
-            <div class="container flex big-features-container">
+            <div class="container flex big-features-container" id="second-big">
                
                 <div class="features-description flex">
                     <h4>Effortless validation for</h4>
@@ -225,5 +227,12 @@
             </div>
             </div>      
 		<script src="https://kit.fontawesome.com/77a92ee3c0.js" crossorigin="anonymous"></script>
+        <script>
+            const toggleButton =document.getElementById('nav-toggle');
+            const navLinks=document.getElementById('nav-links');
+            toggleButton.addEventListener('click',()=>{
+                navLinks.classList.toggle('active');
+            })
+        </script>
 	</body>
 </html>
