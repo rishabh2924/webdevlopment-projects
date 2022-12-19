@@ -45,6 +45,7 @@
     max-width: 1180px;
     margin-inline: auto;
     padding-inline: var(--padding-inline-sections) ;
+    overflow: hidden;
  }
  .top-banner{
     background-color: #4fb3d4;
@@ -76,6 +77,7 @@
     padding: 12px 24px;
     box-shadow: 0 0 2px var(--secondary-text-color);
     transition: 0.2s ease-out;
+    text-align: center;
  }
  .primary-button:hover{
 background-color: var(--accent-color-dark);
@@ -97,6 +99,7 @@ background-color: var(--accent-color-dark);
  .main-nav{
     margin-top: 20px;;
     justify-content: space-between;
+    position: relative;
  }
  .company-logo img{
     width: 200px;
@@ -108,6 +111,10 @@ background-color: var(--accent-color-dark);
     justify-content: end;
     gap:40px;
  }
+ .nav-toggle{
+
+    display: none;
+ }
  /*  header section    */
  header{
    padding: 50px var(--padding-inline-sections) 0;
@@ -117,7 +124,7 @@ background-color: var(--accent-color-dark);
     gap:50px;
  }
  .header-right img{
-    width: 600px;
+    width:100%;
  }
  .header-left{
     max-width: 40vw;
@@ -136,8 +143,9 @@ background-color: var(--accent-color-dark);
     color: var(--primary-text-color);
  }
  .logos{
-    justify-content: space-between;
+    justify-content:space-evenly;
     flex-wrap: wrap;
+    gap: 20px;
  }
  .logo{
     height: 46px;
@@ -150,14 +158,16 @@ background-color: var(--accent-color-dark);
  }
  .features-header{
     text-align: center;
+     margin-bottom: 40px;
  }
  .features-header h2{
     margin-bottom: 20px;
+   
  }
  .features-area{
     flex-wrap: wrap;
     justify-content: space-between;
-    gap: 40px;
+    gap: 20px;
     margin-top: 20px;
  }
  .features-card{
@@ -186,18 +196,24 @@ background-color: var(--accent-color-dark);
 }
 
 /* example sectuion  */
+.example-section{
+    padding: 80px var(--padding-inline-sections) 40px;
+}
 .examples-header{
     flex-direction: column;
     gap: 20px;
-    margin-bottom: 20px;
+    text-align: center;
+   
 }
 .examples-area{
     justify-content: space-between;
+    margin-block: 30px;;
+    flex-wrap: wrap;
 }
 .examples-card{
     width: 23%;
     position: relative;
-    min-height: 300px;
+    height: 300px;
     background: black;
     background:linear-gradient(rgb(0,0,0,0.1),rgb(0,0,0,0.8)) ,url('./assets/asset 35.jpeg');
      background-size: cover;
@@ -231,7 +247,7 @@ background-color: var(--accent-color-dark);
     flex-direction: column;
     gap:30px;
     color:white;
-   
+   text-align: center;
 }
 .cta-section{
  background-color: #183b54;
@@ -266,4 +282,5 @@ footer{
 .subfooter-container{
     justify-content: center;
     gap:30px;
+    flex-wrap: wrap;
 }
